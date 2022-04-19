@@ -1,0 +1,7 @@
+name=Playd8
+author=DPS2004
+description=A Cosy CHIP-8 interpreter
+bundleID=com.dps2004.playd8
+version=1.0
+buildNumber=123
+imagePath=launcher/
