@@ -1,0 +1,34 @@
+[
+  {
+    "filename": "test_opcode.ch8",
+    "name": "Opcode tester",
+    "author": "corax89",
+    "description": "A program to test Opcodes.",
+    "mode": "cosmac",
+    "keys": {
+      "u": -1,
+      "d": -1,
+      "l": -1,
+      "r": -1,
+      "a": -1,
+      "b": -1
+    },
+	"showkeypad": false
+  },
+  {
+    "filename": "catwalk.ch8",
+    "name": "Catwalk",
+    "author": "DPS2004",
+    "description": "A screensaver I made to test out my custom CHIP-8 compiler.",
+    "mode": "cosmac",
+    "keys": {
+      "u": -1,
+      "d": -1,
+      "l": -1,
+      "r": -1,
+      "a": -1,
+      "b": -1
+    },
+	"showkeypad": false
+  }
+]
