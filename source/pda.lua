@@ -104,6 +104,11 @@ function pda:btnp(b)
 		return playdate.buttonJustPressed(b)
 	end
 end
+function pda:btnr(b) 
+	if self.platform == 'playdate' then
+		return playdate.buttonJustReleased(b)
+	end
+end
 function pda:btn(b) 
 	if self.platform == 'playdate' then
 		return playdate.buttonIsPressed(b)

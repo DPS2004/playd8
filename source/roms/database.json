@@ -6,14 +6,14 @@
     "description": "A program to test Opcodes.",
     "mode": "cosmac",
     "keys": {
-      "u": -1,
-      "d": -1,
-      "l": -1,
-      "r": -1,
+      "up": -1,
+      "down": -1,
+      "left": -1,
+      "right": -1,
       "a": -1,
       "b": -1
     },
-	"showkeypad": false
+	"showkeypad": true
   },
   {
     "filename": "catwalk.ch8",
@@ -22,12 +22,28 @@
     "description": "A screensaver I made to test out my custom CHIP-8 compiler.",
     "mode": "cosmac",
     "keys": {
-      "u": -1,
-      "d": -1,
-      "l": -1,
-      "r": -1,
+      "up": -1,
+      "down": -1,
+      "left": -1,
+      "right": -1,
       "a": -1,
       "b": -1
+    },
+	"showkeypad": false
+  },
+  {
+    "filename": "woodsman.ch8",
+    "name": "The Woodsman",
+    "author": "DPS2004",
+    "description": "UseĐ⬅đor Ⓑ to chop from the left, andĐ➡đor Ⓐ to chop from the right.",
+    "mode": "cosmac",
+    "keys": {
+      "up": -1,
+      "down": -1,
+      "left": 1,
+      "right": 3,
+      "a": 12,
+      "b": 2
     },
 	"showkeypad": false
   }

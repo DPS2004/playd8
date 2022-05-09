@@ -37,9 +37,15 @@ function state:init()
 	self.selection = 0
 	self.dselection = 0
 	
-	
-	chip = nacho.init(romdatabase[self.selection+1].mode)
-	loadrom('roms/'..romdatabase[self.selection+1].filename,chip)
+	if not loadedrom then
+		chip = nacho.init(romdatabase[self.selection+1].mode)
+		loadrom('roms/'..romdatabase[self.selection+1].filename,chip)
+		loadedrom = romdatabase[self.selection+1]
+		selectedrom = self.selection
+	else
+		self.selection = selectedrom
+		self.dselection = selectedrom
+	end
 end
 
 function state:update(dt)
@@ -57,9 +63,29 @@ function state:update(dt)
 	end
 	
 	if updatescreen then
+		loadedrom = romdatabase[self.selection+1]
 		chip = nacho.init(romdatabase[self.selection+1].mode)
 		loadrom('roms/'..romdatabase[self.selection+1].filename,chip)
+		selectedrom = self.selection
 	end
+	
+	if pda:btnp('a') then
+		
+		if loadedrom.showkeypad then
+			chipdraw.x = 40
+			chipdraw.y = 8
+			chipdraw.scale = 5
+			keypad.x = 0
+			keypad.y = 168
+		else
+			chipdraw.x = 8
+			chipdraw.y = 8
+			chipdraw.scale = 6
+		end
+	
+		changestate('play')
+	end
+	
 	
 	updatechip()
 	
@@ -80,7 +106,8 @@ function state:draw()
 		end
 		
 	end
-	drawchip()
+	drawchip(true)
+	drawkeypad()
 end
 
 return state

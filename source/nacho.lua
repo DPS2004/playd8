@@ -472,6 +472,12 @@ function nacho.init(mode, cmode, extras) -- make a new instance of chip8
     end
     chip.nop = function()
     end
+	
+	chip.keys = {}
+	for i = 0, 15 do 
+		chip.keys[i] = {pressed = false, released = false, down = false}
+	end
+	
 
     if chip.dumper then
         print("loading chip in dumper mode!")
